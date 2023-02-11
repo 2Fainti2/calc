@@ -1,3 +1,15 @@
+def hello(func):
+        def wrapper():
+                print('hello')
+                func()
+        return wrapper
+def numbers(func):
+        def wrapper():
+                print("enter numbers ")
+                func()
+        return wrapper
+@hello
+@numbers
 try:
         a = int(input('A: '))
         sign = input('Sign: ')
